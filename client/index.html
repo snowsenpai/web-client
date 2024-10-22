@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Integration Tester</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Web Integration Tester</h1>
+        
+        <section id="http-section">
+            <h2>HTTP Requests</h2>
+            <input type="text" id="url-input" placeholder="Enter URL">
+            <select id="method-select">
+                <option value="GET">GET</option>
+                <option value="POST">POST</option>
+                <option value="PUT">PUT</option>
+                <option value="DELETE">DELETE</option>
+            </select>
+            <textarea id="request-body" placeholder="Request body (for POST/PUT)"></textarea>
+            <button id="send-request">Send Request</button>
+            <div id="response-output"></div>
+        </section>
+
+        <section id="websocket-section">
+            <h2>WebSocket</h2>
+            <input type="text" id="ws-url-input" placeholder="Enter WebSocket URL">
+            <button id="ws-connect">Connect</button>
+            <button id="ws-disconnect" disabled>Disconnect</button>
+            <input type="text" id="ws-message-input" placeholder="Enter message">
+            <button id="ws-send" disabled>Send</button>
+            <div id="ws-output"></div>
+        </section>
+
+        <section id="cookie-section">
+            <h2>Cookies</h2>
+            <div id="cookie-display"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
